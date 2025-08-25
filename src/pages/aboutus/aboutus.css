@@ -1,0 +1,99 @@
+@import url("../../variable.css");
+/* .about-container {
+   
+  } */
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-header h1 {
+    color: var(--color-green-bg);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    line-height: 1.6;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .about-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); */
+  }
+  
+  .about-highlights {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-highlights h2 {
+    margin-bottom: 30px;
+  }
+  
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .highlight-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .highlight-card h3 {
+    margin: 10px 0;
+  }
+  
+  /* .highlight-card p {  } */
+  
+  .highlight-card .emoji {  
+    font-size: 2rem;
+    color: var(--color-green-bg);
+ }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 40px;
+    /* font-size: 1rem; */
+    /* color: #444; */
+  }
+  
+  .about-footer a {
+    color: var(--color-green-bg);
+    text-decoration: none;
+  }
+  
+  .about-footer a:hover {
+    text-decoration: underline;
+  }
+  

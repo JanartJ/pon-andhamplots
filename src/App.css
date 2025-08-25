@@ -1,0 +1,61 @@
+@import url("./variable.css");
+
+/* Font color classes */
+.white-text{
+    color: var(--color-text-white) !important;
+}
+
+.green-text{
+    color: var(--color-green-bg) !important;
+}
+
+.light-text{
+    color: var(--color-light-bg) !important;
+}
+
+.btn-text{
+    color: var(--color-btn-light) !important;
+}
+
+.footer-text{
+    color: var(--color-footer-text) !important;
+}
+
+.nav-header-text{
+    color: var(--color-header-text-green) !important;
+    font-weight: bold !important;
+}
+
+/* Bg color classes */
+.white-bg{
+    background-color: var(--color-text-white) !important;
+}
+
+.green-bg{
+    background-color: var(--color-green-bg) !important;
+}
+
+.light-bg{
+    background-color: var(--color-light-bg) !important;
+}
+
+/* Text styling classes */
+.text-justify{
+    text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.heading-bold{
+    font-weight: 600;
+}
+
+.margin-auto{
+    margin:auto;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

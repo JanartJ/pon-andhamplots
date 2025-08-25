@@ -1,0 +1,319 @@
+
+/* footer component css */
+.footer-container-anadham {
+    background: url("../../assets/images/Footer-bg-img.png") no-repeat center center/cover;
+    min-height: 100vh; /* Ensure it takes full height */
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    color: var(--color-light-bg);
+    line-height: 2;
+  }
+  
+  .footer-sub-container {
+    /* background: url("../../assets/images/footer-bg.png") no-repeat center center/cover; */
+    width: 100%;
+    display: grid;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .footer-sub-container .footer-logoimg{
+    width: 25rem;
+    margin: auto;
+  }
+  
+  .footer-container-anadham .footer-content-p{
+    color: var(--color-light-bg);
+    text-align: justify;
+  }
+  
+  .footer-container-anadham .qck-link div{
+    cursor: pointer;
+  }
+  .footer-container-anadham .qck-link div:hover{
+    color: var(--color-green-bg);
+  }
+  
+  .footer-container-anadham .footer-last-container{
+    text-align: center;
+  }
+  /* footer component css */
+  
+  .container-contactform {
+      /* background: url("../../assets/footerbg.png") no-repeat center center/cover; */
+      color: var(--color-green-bg);
+      padding: 60px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh; /* Ensure it takes full height */
+      width: 100%;
+      line-height: 2;
+    }
+    
+    /* Title */
+    .container-contactform .title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--color-light-bg);
+    }
+
+    .container-contactform .title-h5 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--color-light-bg);
+      }
+    
+    /* Features Section */
+    .container-contactform .features {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+    
+    /* Form and Contact Sections Side by Side */
+    .container-contactform .footer-form-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    
+    /* Adjust Form and Contact Box Sizes */
+    .container-contactform .form-section.large {
+      background-color: var(--color-light-bg) !important;
+      padding: 35px;
+      border-radius: 12px;
+      width: 65%;
+      text-align: left;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .container-contactform .quote-section{
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      row-gap: 1rem;
+    }
+  
+    .container-contactform .contact-section.small {
+      background-color: var(--color-light-bg);
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      row-gap: 1rem;
+      padding: 35px;
+      border-radius: 12px;
+      width: 30%;
+      text-align: left;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Form Grid */
+    .container-contactform .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      row-gap: 2rem;
+    }
+    
+    /* Input Containers with Icons */
+    .container-contactform .input-container {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 6px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    
+    .container-contactform .input-container .icon {
+      color: var(--color-green-bg);
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    
+    .container-contactform input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      color: var(--color-green-bg);
+      outline: none;
+    }
+    
+    /* Textarea Styling */
+    .container-contactform textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 15px;
+      border-radius: 6px;
+      padding: 12px;
+    }
+    
+    /* Button Styling */
+    .container-contactform .submit-button, .contact-button {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--color-green-bg) !important;
+      color: var(--color-light-bg) !important;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    
+    .container-contactform  .submit-button:hover, .contact-button:hover {
+      outline: var(--color-light-bg);
+    }
+    
+
+    .download-brocher-button{
+      padding: 10px;
+      text-decoration: none;
+      border: 1px solid var(--color-green-bg);
+      color:var(--color-green-bg);
+      border-radius: 5px;
+    }
+    
+    
+    
+    .container-contactform  .features {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    
+    .container-contactform  .features span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-light-bg);
+    }
+    
+    /* White-filled circle around the tick */
+    .container-contactform  .tick-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;  /* Circle size */
+      height: 24px; /* Circle size */
+      background-color: white; /* White filled background */
+      color: var(--color-green-bg) !important; /* Tick color */
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50%; /* Makes it a circle */
+    }
+    .container-contactform  .thank-you-message {
+      font-weight: bold;
+      text-align: center;
+      color: var(--color-green-bg); /* Match form's theme color */
+      padding: 20px;
+      border-radius: 10px;     
+    }
+    
+    .footer-social-icons{
+        display: flex;
+    }
+  
+    .footer-social-icons img{
+        width: 90px;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 768px) {   
+    
+      /* Adjust container spacing */
+      .container-contactform {
+        width: 100%;
+        padding: 15px;
+      }
+    
+      /* Features section adjustments */
+      .container-contactform .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    
+      /* Reduce font size for features text */
+      .container-contactform .features span {
+        font-size: 16px; /* Reduced from 18px */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    
+      /* Form container adjustments */
+      .container-contactform .footer-form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+      }
+    
+      /* Form section - make it responsive */
+      .container-contactform .form-section.large {
+        width: 100%;
+        max-width: 90%;
+        order: 1;
+        padding: 25px;
+        border-radius: 10px;
+      }
+    
+      /* Contact section - ensure correct spacing */
+      .container-contactform .contact-section.small {
+        width: 100%;
+        max-width: 90%;
+        order: 2;
+        padding: 25px;
+        border-radius: 10px;
+      }
+    
+      /* Reduce font size in form labels and inputs */
+      .container-contactform  .form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    
+      .container-contactform  .input-container {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      .container-contactform input, select, textarea {
+        font-size: 14px; /* Reduced from 16px */
+      }
+    
+      /* Buttons adjustments */
+      .container-contactform  .submit-button, .contact-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px; /* Reduced from 18px */
+        margin-top: 15px;
+        border-radius: 6px;
+      }
+    
+      /* Adjust thank you message */
+      .container-contactform  .thank-you-message {        
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+      }
+    }

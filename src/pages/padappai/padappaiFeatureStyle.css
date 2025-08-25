@@ -1,0 +1,79 @@
+@import url("../../variable.css");
+
+/* Container for the scrolling images */
+.padappai-feature-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Styling for continuous animation */
+.padappai-feature-container .scrolling-images {
+    display: inline-flex;
+    grid-gap:2rem;
+    animation: scrollRight 25s linear infinite;
+}
+.padappai-feature-incontainer{
+    padding: 2rem;
+    width: 20rem;
+    height: auto;    
+    min-height: 280px;
+    /* background-color: var(--color-green-bg); */
+    background-color: #2E5D4B;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+
+/* Images styling */
+.padappai-feature-incontainer img {    
+    height: auto;
+    margin: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.padappai-feature-incontainer h6{
+    padding: 10px;
+    color:var(--color-text-white);
+}
+
+.padappai-feature-container .featurediv{
+    text-align: center;
+    text-wrap: auto;
+}
+
+
+
+
+/* Responsive image widths */
+@media (min-width: 1024px) {
+    .padappai-feature-container img {
+        width: 120px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .padappai-feature-container img {
+        width: 9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .padappai-feature-container img {
+        width: 9rem;
+    }
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

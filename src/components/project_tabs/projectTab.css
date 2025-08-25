@@ -1,0 +1,27 @@
+@import url("../../variable.css");
+
+.project-tab-container{
+    padding: 2rem;
+}
+.project-tab-btn-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-tab-btn{
+    border: 1px solid var(--color-green-bg);
+    padding: 10px;
+    cursor: pointer;    
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-green-bg);
+}
+
+.active-tab-btn{
+    background-color: var(--color-light-bg);
+    font-weight: 600;
+}
+
+.iframe-map{
+    width: 100%;
+}

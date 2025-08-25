@@ -1,0 +1,14 @@
+.modal-header .btn-close{
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    right: 40px;
+}
+.modal-content{
+    background: transparent !important;
+    border: none !important;
+}
+
+.modal-header{
+    border-bottom: none !important;
+}

@@ -1,0 +1,85 @@
+@import url("../../variable.css");
+
+.kanchi-location-container{
+    padding: 2% 20%;
+}
+
+.kanchi-location-container .accordion-header .collapsed{
+    background-color: var(--color-light-bg) !important;
+    color: var(--color-green-bg);
+    border: none !important;
+    outline: none !important;
+}
+
+.kanchi-location-container .accordion-button:not(.collapsed){
+    background-color: var(--color-green-bg) !important;
+    color: var(--color-light-bg);
+    border: none !important;
+    outline: none !important;
+}
+
+.kanchi-location-container .accordion-button:focus{
+    box-shadow: var(--color-card-box-shadow);
+}
+
+.why-kanchi{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding: 2%;
+    text-align: justify;
+}
+
+.kanchi-features-heading{
+    text-align: center;    
+    padding: 1%;
+    margin: 0;
+}
+.kanchi-broucher-btn-div{
+    width: 40%;    
+}
+.kanchi-why-content h4{
+    color: var(--color-green-bg);
+    font-weight: 600;
+}
+/* Laptop and  larger screens styling (769px to 1024px beyond) */
+@media (min-width: 1024px) {
+    .kanchi-location-container{
+        padding: 2% 20%;
+    }
+    .why-kanchi img{
+        width: 70%;
+        margin: auto;
+    }
+}
+
+
+/* Tablet styling (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .kanchi-location-container{
+        padding: 2%;
+    }
+    .why-kanchi img{
+        width: 80%;
+    }
+}
+
+/* Mobile styling (up to 480px) */
+@media (max-width: 480px) {
+    .kanchi-location-container{
+        padding: 2%;
+    }
+    .why-kanchi{
+        padding: 2%;
+        display: flex;
+        flex-wrap: wrap;        
+    }
+    .why-kanchi img{
+        width: 100%;
+    }
+    .why-kanchi .kanchi-why-content{
+        margin-top: 2%;
+    }
+    .kanchi-broucher-btn-div{
+        width: 100%;
+    }
+}

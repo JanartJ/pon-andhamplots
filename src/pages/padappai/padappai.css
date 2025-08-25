@@ -1,0 +1,85 @@
+@import url("../../variable.css");
+
+.padappai-location-container{
+    padding: 2% 20%;
+}
+
+.padappai-location-container .accordion-header .collapsed{
+    background-color: var(--color-light-bg) !important;
+    color: var(--color-green-bg);
+    border: none !important;
+    outline: none !important;
+}
+
+.padappai-location-container .accordion-button:not(.collapsed){
+    background-color: var(--color-green-bg) !important;
+    color: var(--color-light-bg);
+    border: none !important;
+    outline: none !important;
+}
+
+.padappai-location-container .accordion-button:focus{
+    box-shadow: var(--color-card-box-shadow);
+}
+
+.why-padappai{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    padding: 2%;
+    text-align: justify;
+}
+
+.padappai-features-heading{
+    text-align: center;    
+    padding: 1%;
+    margin: 0;
+}
+.padappai-broucher-btn-div{
+    width: 40%;    
+}
+.padappai-why-content h4{
+    color: var(--color-green-bg);
+    font-weight: 600;
+}
+/* Laptop and  larger screens styling (769px to 1024px beyond) */
+@media (min-width: 1024px) {
+    .padappai-location-container{
+        padding: 2% 20%;
+    }
+    .why-padappai img{
+        width: 70%;
+        margin: auto;
+    }
+}
+
+
+/* Tablet styling (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .padappai-location-container{
+        padding: 2%;
+    }
+    .why-padappai img{
+        width: 80%;
+    }
+}
+
+/* Mobile styling (up to 480px) */
+@media (max-width: 480px) {
+    .padappai-location-container{
+        padding: 2%;
+    }
+    .why-padappai{
+        padding: 2%;
+        display: flex;
+        flex-wrap: wrap;        
+    }
+    .why-padappai img{
+        width: 100%;
+    }
+    .why-padappai .padappai-why-content{
+        margin-top: 2%;
+    }
+    .padappai-broucher-btn-div{
+        width: 100%;
+    }
+}

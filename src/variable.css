@@ -1,0 +1,33 @@
+/* variables.css */
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+    
+    --color-green-bg: #335731;
+    --color-light-bg: #F5DEAB;
+    --color-text-white:#ffffff;
+    --color-header-text-green:#2C4B16;
+    --color-btn-light:#975F37;
+    --color-footer-text:#59595B;
+    --color-black-text:#020202;
+    --color-card-border:#D3D1D1;
+    --color-card-box-shadow:rgba(0, 0, 0, 0.1);
+}
+
+
+/* Laptop and  larger screens styling (769px to 1024px beyond) */
+@media (min-width: 1024px) {
+   
+}
+
+
+/* Tablet styling (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+   
+}
+
+/* Mobile styling (up to 480px) */
+@media (max-width: 480px) {
+   
+}

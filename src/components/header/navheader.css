@@ -1,0 +1,254 @@
+ @import url("../../variable.css");
+
+.nav-header-lap{
+  overflow-y: hidden;
+} 
+
+.nav-header-lap .scrolling-text-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-green-bg); /* Optional background */
+  padding: 10px 0;
+}
+
+.nav-header-lap .scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 25s linear infinite;
+  font-weight: 600;
+  color: var(--color-light-bg);
+}
+.mobileview-nav{
+  display: flex;
+      align-items: center;
+      gap: 10px;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.nav-main-container{
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  width: 100%;
+  border-bottom: 1px solid var(--color-green-bg);
+}
+.nav-header-logo{
+  margin: auto;
+}
+.nav-header-logo img{
+    width: 10rem;
+}
+
+.nav-header-content{
+  margin: auto !important;
+}
+
+
+.main-wrapper {
+    position: relative;
+  }
+
+  
+.video-section-wrapper {
+  position: relative;
+  width: 100%;
+  /* height: calc(var(--vh, 1vh) * 100); */
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.4); */
+  z-index: 1;
+}
+  
+
+ .form-container {
+    /* position:absolute;
+    bottom: -5%;
+    z-index: 10; */
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 25px var(--color-card-box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .form-control{
+    border-radius: 20px; 
+  }
+  
+  
+  .navbar-toggler{
+    color: var(--color-green-bg) !important;
+    border: 1px solid var(--color-green-bg);
+  }
+  
+ .text-padding-content{
+    padding: 4rem 18%;
+  }
+
+  
+  .project-dropdown {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    background: var(--color-light-bg);
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+    border-top: 3px solid var(--color-green-bg);
+    gap:2%;
+  }
+  
+  .project-column {
+    /* flex: 1;
+    margin-right: 20px; */
+    border-left: 1px solid var(--color-green-bg);
+  }
+
+  .project-column-btns button{
+    margin: 20px 0px 20px 10px !important;
+  }
+
+  .project-column-btns{
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .project-column-site{
+    margin: auto;
+    padding: 2rem;
+  }
+  .project-column-content{
+    padding: 2rem;
+  }
+  
+  .nav-wrapper {
+    position: relative;
+  }
+
+  
+  /* Mobile view css */
+
+  
+.navbar-toggler-icon{
+  background-image: url('../../assets/icons/nav-toggle-icons.svg');
+}
+
+.closebtn{
+  
+  font-size: 2rem !important;
+  background: transparent;
+  margin-right: 10px !important;
+  color: var(--color-green-bg);
+  opacity: 1;
+}
+.offcanvas-header{
+  border-bottom: 1px solid var(--color-green-bg);
+}
+.navbar-toggler{
+  color: var(--color-green-bg) !important;
+  border: 1px solid var(--color-green-bg);
+}
+
+.menuitems ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.toggle-btn{
+  display: none;
+}
+
+.activepage{
+  font-weight: bold !important;
+}
+.nav-link span{
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+.project-dropdown {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .project-dropdown {
+    flex-direction: column;
+    top:12rem;
+  }
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+  .project-column{
+    border: none;
+  }
+
+  .project-column-site iframe {
+    width: 100% !important;
+  }
+  .each-project-card-container {
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section-wrapper{
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .nav-container{
+    display: none;
+  }
+  .menuitems{
+      display: none;
+  }
+  .toggle-btn{
+      display: inline;
+  }
+  .home-logo{
+      width: 14rem;
+  }
+  .each-project-card-container {
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+} 

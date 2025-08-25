@@ -1,0 +1,42 @@
+@import url("../../variable.css");
+
+/* .our-project-heading{
+
+} */
+.our-project-main-container{
+    padding: 1% 3% 3% 3%;
+}
+
+.our-project-card-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.each-project-card-container{
+    border: 1px solid var(--color-green-bg);
+    border-radius: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    position: relative;
+    width: 30%;
+    min-width: 330px;
+}
+.each-project-card-container img{
+    width: 100%;
+    border-radius: 2.5rem;
+}
+
+.each-project-card-container .our-project-btn-div{
+    position: absolute;
+    left: 30%;
+}
+
+
+/* Mobile styling (up to 480px) */
+@media (max-width: 480px) {
+    .each-project-card-container{
+        margin: 1rem 0.5rem 1rem 0.5rem;
+    }
+}
