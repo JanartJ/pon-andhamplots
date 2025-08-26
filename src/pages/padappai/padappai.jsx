@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeBanner from "../../assets/images/padappai_banner3.jpeg"; 
+import HomeBanner from "../../assets/images/padappai_banner1.jpeg"; 
 import Banner from '../../components/header/banner';
 import PadappaiLocation from './locationpadappai';
 import PadappaiFeature from './padappaiFeature';
@@ -10,7 +10,7 @@ import legal from "../../assets/icons/features/legal.png";
 import money from "../../assets/icons/features/money.png";
 import school from "../../assets/icons/features/school.png";
 import water from "../../assets/icons/features/water.png";
-import Aboutpadappai  from "../../assets/images/card1.jpg";
+import Aboutpadappai  from "../../assets/images/card1.jpeg";
 import "./padappai.css";
 import { PlotsAdvantages } from '../../components/plots/plots';
 import SliderVideo from '../../components/sliders/vsliders';
@@ -101,7 +101,7 @@ export const Padappai = (props) => {
     <div>
         <Banner bannerImgSrc={HomeBanner}/>
         <Whypadappai/>
-        <h2 className='padappai-features-heading green-text heading-bold'>Features at Anandham</h2>
+        <h2 className='padappai-features-heading green-text heading-bold'>Features at Anandhamplots</h2>
         <PadappaiFeature details={featureDetails}/>
         <h2 className='padappai-features-heading green-text heading-bold'>Promising Locations</h2>
         <PadappaiLocation/>
@@ -117,7 +117,11 @@ const Whypadappai = ()=>{
             <img src={Aboutpadappai} alt="About padappai"/>
             <div className='padappai-why-content'>
                 <h4 >Why Anandham padappai?</h4>
-                <p>Anandham at padappai, is an established neighbourhood with a peaceful environment and high potential for investment. Strategically positioned near to padappaipuram city, the region boasts of good infrastructure including transportation, workspaces, educational institutions etc.</p>
+                <p>A environment of exclusive and affordable plots in padappai</p>
+                <p>Anandham spans a generous 2.1 acres, offering a remarkable opportunity for both development and investment. Located along the bustling Tambaram – Mudichur – Oragadam Road near Padappai, next to the prestigious Alwin International School, this land enjoys a strategic and highly desirable position.</p>
+                <p>The project comprises 60 plots, ideal for residential or commercial use, making it an appealing choice for investors and developers eager to tap into the area’s expanding prospects. With easy access to essential amenities, schools and residential complexes, Anandham.
+                </p>
+                <p>Serves as a promising foundation for diverse ventures. Whether for residential, commercial, or mixed-use purposes, this plot holds significant potential to foster a vibrant and thriving residential plots in padappai.</p>
                 <div className='padappai-broucher-btn-div'><DownloadBroucher/></div> 
             </div>
         </div>

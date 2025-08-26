@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeBanner from "../../assets/images/sholavaram_banner1.jpeg"; 
+import HomeBanner from "../../assets/images/sholavaram_banner2.jpeg"; 
 import Banner from '../../components/header/banner';
 // import SholavaramLocation from './locationsholavaram';
 import SholavaramFeature from './sholavaramFeature';
@@ -10,7 +10,7 @@ import legal from "../../assets/icons/features/legal.png";
 import money from "../../assets/icons/features/money.png";
 import school from "../../assets/icons/features/school.png";
 import water from "../../assets/icons/features/water.png";
-import Aboutsholavaram  from "../../assets/images/card3.jpg";
+import Aboutsholavaram  from "../../assets/images/card3.jpeg";
 import "./sholavaram.css";
 import { PlotsAdvantages } from '../../components/plots/plots';
 import SliderVideo from '../../components/sliders/vsliders';
@@ -101,7 +101,7 @@ export const Sholavaram = (props) => {
     <div>
         <Banner bannerImgSrc={HomeBanner}/>
         <Whysholavaram/>
-        <h2 className='sholavaram-features-heading green-text heading-bold'>Features at Anandham</h2>
+        <h2 className='sholavaram-features-heading green-text heading-bold'>Features at Anandhamplots</h2>
         <SholavaramFeature details={featureDetails}/>
         {/* <h2 className='sholavaram-features-heading green-text heading-bold'>Promising Locations</h2> */}
         {/* <SholavaramLocation/> */}
@@ -117,7 +117,9 @@ const Whysholavaram = ()=>{
             <img src={Aboutsholavaram} alt="About sholavaram"/>
             <div className='sholavaram-why-content'>
                 <h4 >Why Anandham Sholavaram?</h4>
-                <p>Anandham at Sholavaram, is an established neighbourhood with a peaceful environment and high potential for investment. Strategically positioned near to sholavarampuram city, the region boasts of good infrastructure including transportation, workspaces, educational institutions etc.</p>
+                <p>Red Hills is a prominent locality in the northern part of Chennai. Due to its rapidly growing infrastructure and seamless connectivity to other parts of the city, it has emerged as the most preferred destination for homebuyers and real estate investors.</p>
+                <p> With this project, AnandhamPlots has made residential land and plots available for sale near Red Hills at reasonable prices. The best thing about this project is the easy access it offers to world-class amenities and facilities along with the thriving social infrastructure that surrounds it.
+                </p>
                 <div className='sholavaram-broucher-btn-div'><DownloadBroucher/></div> 
             </div>
         </div>

@@ -53,7 +53,7 @@ import Linkedin from "../../assets/icons/linkedin.png";
                 <h4>Our Projects</h4>
                 <div onClick={()=>handleLink("kanchipuram")}>Ongoing Projects</div>
                 <div onClick={()=>handleLink("padappai")}>Completed Projects</div>
-                <div onClick={()=>handleLink("redhills")}>Upcoming Projects</div>
+                <div onClick={()=>handleLink("sholavaram")}>Upcoming Projects</div>
               </Col>              
             </Row>
             <br/>

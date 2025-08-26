@@ -63,20 +63,20 @@ const ContactForm = ({type="normal"}) => {
   const handleClick = (e) => {
     if (!validateForm(formData)) return;
 
-    const SENDURL = `https://docs.google.com/forms/d/e/1FAIpQLScGm62E_yvpd3SCITNqJr2jRFtBE0QJLe1KP7tsfPlfDI8Iqg/formResponse?entry.1439694226=${encodeForGoogleForms(
+    const SENDURL = `https://docs.google.com/forms/d/e/1FAIpQLSd7LrbHeOPyPrrGIz-ebqbFO_E0Uoc-0E5xyUy0urAFZLf0lg/formResponse?entry.897692886=${encodeForGoogleForms(
       formData.name
-    )}&entry.1816982461=${encodeForGoogleForms(
+    )}&entry.1811489556=${encodeForGoogleForms(formData.mobile)}&entry.29597710=${encodeForGoogleForms(
       formData.email
-    )}&entry.1780835660=${encodeForGoogleForms(formData.mobile)}`;
-    console.log("SENDURL",SENDURL);
-    // fetch(SENDURL, {
-    //   method: "POST",
-    //   mode: "no-cors",
-    // })
-    //   .then(() => {
+    )}&entry.116710177=yes`;
+    // console.log("SENDURL",SENDURL);
+    fetch(SENDURL, {
+      method: "POST",
+      mode: "no-cors",
+    })
+      .then(() => {
         setShowSuccess(true);
         setSubmitted(true);
-        // alert("Thank you for showing your interset !...Our business team will reach you soon.")
+        alert("Thank you for showing your interset !...Our business team will reach you soon.")
         setFormData({ name: "", email: "", mobile: "" });
         if(type === "normal"){
             setTimeout(() => {
@@ -84,10 +84,10 @@ const ContactForm = ({type="normal"}) => {
             setSubmitted(false);
           }, 5000);
         }
-      // })
-      // .catch((error) => {
-      //   console.error("Error submitting form:", error);
-      // });
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+      });
   };
 
   return (
@@ -160,10 +160,10 @@ const ContactForm = ({type="normal"}) => {
             <div className="thank-you-message">
               {showSuccess && (
                   <div className="green-text text-center mt-3">
-                  Form submitted successfully!
+                      Form submitted successfully!
                   </div>
               )}
-              <p>Thank you for your request! We will get back to you soon.</p>
+              <p className="text-center">Thank you for your request! We will get back to you soon.</p>
               {type === "modal" && (
               <a
                 href="/brouchres/kanchi_brochure.pdf"
@@ -191,7 +191,7 @@ const ContactForm = ({type="normal"}) => {
             <div>
               <h3>Quick Contact</h3>
               <p>Email: sales@anadhamplots.com</p>
-              <p>Call Us: +91 99623 43243</p>
+              <p>Call Us: +91 98845 33533</p>
             </div>
           </div>
         )}

@@ -3,9 +3,9 @@ import { Nav,Row,Col } from 'react-bootstrap';
 import './navheader.css';
 import CustomButton from '../shared/button/button';
 import anandham_logo from "../../assets/logo/anandham_Logo.png"; 
-import Padappai from "../../assets/images/card1.jpg";
-import Kanchipuram from "../../assets/images/card2.jpg";
-import Redhills from "../../assets/images/card3.jpg";
+import Padappai from "../../assets/images/card1.jpeg";
+import Kanchipuram from "../../assets/images/card2.jpeg";
+import Sholavaram from "../../assets/images/card3.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse,faBook,faBriefcase,faCaretDown,faPhone,faHourglassEnd,faHourglassHalf,faHourglassStart,faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -38,6 +38,10 @@ export default function NavHeader() {
     console.log("Valuess",values);
     setShowProject(values);
   }
+  const handleLinks = (path) => {
+    window.location.href = `/${path}`
+  }
+
   return (
     <div className='nav-header-lap'>
         <div className="scrolling-text-container" 
@@ -45,7 +49,7 @@ export default function NavHeader() {
               setShowProjectsDropdown(false)
             }}>
           <div className="scrolling-text">
-            🚀 ENQUIRE NOW FOR A FREE SITE VISIT - +91 89395 893889 🏡
+            🚀 ENQUIRE NOW FOR A FREE SITE VISIT - +91 98845 33533 🏡
           </div>
         </div>
         <div>
@@ -65,12 +69,9 @@ export default function NavHeader() {
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
                       }}
-                      >Home</Nav.Link>
-                      <Nav.Link href="/aboutus" className="nav-header-text px-3" 
-                      onMouseOver={() => {
-                        setShowProjectsDropdown(false)
-                      }}
-                      >About Us</Nav.Link>
+                      >
+                        <h5>Home</h5></Nav.Link>
+                      
                       <div
                         className="nav-project-wrapper"
                         onMouseOver={() => {
@@ -78,7 +79,8 @@ export default function NavHeader() {
                         }}
                         
                       >
-                        <Nav.Link href="#" className="nav-header-text px-3" onClick={() => { setShowProjectsDropdown(!showProjectsDropdown)}}>Projects</Nav.Link>
+                        <Nav.Link href="#" className="nav-header-text px-3" 
+                        onClick={() => { setShowProjectsDropdown(!showProjectsDropdown)}}><h5>Projects</h5></Nav.Link>
                         {showProjectsDropdown && (
                           <div className="project-dropdown shadow" 
                           onMouseLeave={() => {
@@ -94,7 +96,7 @@ export default function NavHeader() {
                                 showProject === "Kanchipuram" ?
                                 <img src={Kanchipuram} alt={`Project-${showProject}`} className="project-image" />
                                 :
-                                <img src={Redhills} alt={`Project-${showProject}`} className="project-image" />
+                                <img src={Sholavaram} alt={`Project-${showProject}`} className="project-image" />
                                 }
                               </div>
                             </Col>
@@ -128,9 +130,9 @@ export default function NavHeader() {
                                 <br/>
                                 <CustomButton
                                   title="Upcoming Projects"
-                                  value={"Redhills"}
-                                  textcolor={showProject === "Redhills" ? "light" : "btn"}
-                                  btnBg={showProject === "Redhills" ? "green" : "white"}
+                                  value={"Sholavaram"}
+                                  textcolor={showProject === "Sholavaram" ? "light" : "btn"}
+                                  btnBg={showProject === "Sholavaram" ? "green" : "white"}
                                   textWeight={700}
                                   btnMinWidth="10rem"
                                   btnBorderRadius="5px"
@@ -148,21 +150,54 @@ export default function NavHeader() {
                                     <h5 className='green-text'>Featured Projects</h5>
                                     <p>Explore our latest and most exciting developments.</p>
                                     <h4 className='green-text'><b>PADAPPAI</b></h4>
-                                    <a className="cursor-pointer" href="/padappai">Explore More</a>
+                                    <CustomButton
+                                      title="Know More"
+                                      value={'padappai'}
+                                      textcolor={showProject === "Padappai" ? "light" : "btn"}
+                                      btnBg={showProject === "Padappai" ? "green" : "white"}
+                                      textWeight={700}
+                                      btnMinWidth="10rem"
+                                      btnBorderRadius="5px"
+                                      // btnMarg={"1rem"}
+                                      handleClick={handleLinks}
+                                    />
+                                    {/* <a className="cursor-pointer" href="/padappai">Explore More</a> */}
                                   </div>
                                   : showProject === "Kanchipuram" ?
                                   <div className='project-column-content'>
                                     <h5 className='green-text'>Featured Projects</h5>
                                     <p>Explore our latest and most exciting developments.</p>
                                     <h4 className='green-text'><b>KANCHIPURAM</b></h4>
-                                    <a className="cursor-pointer" href="/kanchipuram">Explore More</a>
+                                    <CustomButton
+                                      title="Know More"
+                                      value={'kanchipuram'}
+                                      textcolor={showProject === "Kanchipuram" ? "light" : "btn"}
+                                      btnBg={showProject === "Kanchipuram" ? "green" : "white"}
+                                      textWeight={700}
+                                      btnMinWidth="10rem"
+                                      btnBorderRadius="5px"
+                                      // btnMarg={"1rem"}
+                                      handleClick={handleLinks}
+                                    />
+                                    {/* <a className="cursor-pointer" href="/kanchipuram">Explore More</a> */}
                                   </div>
                                   :
                                   <div className='project-column-content'>
                                     <h5 className='green-text'>Featured Projects</h5>
                                     <p>Explore our latest and most exciting developments.</p>
-                                    <h4 className='green-text'><b>REDHILS</b></h4>
-                                    <a className="cursor-pointer" href="/redhills">Explore More</a>
+                                    <h4 className='green-text'><b>SHOLAVARAM</b></h4>
+                                    <CustomButton
+                                      title="Know More"
+                                      value={'sholavaram'}
+                                      textcolor={showProject === "Sholavaram" ? "light" : "btn"}
+                                      btnBg={showProject === "Sholavaram" ? "green" : "white"}
+                                      textWeight={700}
+                                      btnMinWidth="10rem"
+                                      btnBorderRadius="5px"
+                                      // btnMarg={"1rem"}
+                                      handleClick={handleLinks}
+                                    />
+                                  
                                   </div>
                                 }
                             </Col>
@@ -207,12 +242,18 @@ export default function NavHeader() {
                           </div>
                         )}
                       </div>
+                       
+                      <Nav.Link href="/aboutus" className="nav-header-text px-3" 
+                      onMouseOver={() => {
+                        setShowProjectsDropdown(false)
+                      }}
+                      ><h5>About Us</h5></Nav.Link>
 
                       <Nav.Link href="/blogs" className="nav-header-text px-3" 
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
                       }}
-                      >Blogs</Nav.Link>
+                      ><h5>Blogs</h5></Nav.Link>
                       
                       {/* <Nav.Link href="/padappai" className="nav-header-text px-3"
                       onMouseOver={() => {
@@ -233,7 +274,7 @@ export default function NavHeader() {
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
                       }}
-                      >Contact Us</Nav.Link>                      
+                      ><h5>Contact Us</h5></Nav.Link>                      
                   </Nav>
                   <button
                       className="navbar-toggler toggle-btn"

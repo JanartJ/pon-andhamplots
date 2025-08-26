@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeBanner from "../../assets/images/home_banner.jpg"; 
+import HomeBanner from "../../assets/images/kanchi_banner1.jpeg"; 
 import Banner from '../../components/header/banner';
 import KanchiLocation from './locationKanchi';
 import KanchiFeature from './kanchiFeature';
@@ -10,7 +10,7 @@ import legal from "../../assets/icons/features/legal.png";
 import money from "../../assets/icons/features/money.png";
 import school from "../../assets/icons/features/school.png";
 import water from "../../assets/icons/features/water.png";
-import AboutKanchi  from "../../assets/images/kanchi.png";
+import AboutKanchi  from "../../assets/images/card2.jpeg";
 import "./kanchi.css";
 import { PlotsAdvantages } from '../../components/plots/plots';
 import SliderVideo from '../../components/sliders/vsliders';
@@ -101,7 +101,7 @@ export const Kanchi = (props) => {
     <div>
         <Banner bannerImgSrc={HomeBanner}/>
         <Whykanchi/>
-        <h2 className='kanchi-features-heading green-text heading-bold'>Features at Anandham</h2>
+        <h2 className='kanchi-features-heading green-text heading-bold'>Features at Anandhamplots</h2>
         <KanchiFeature details={featureDetails}/>
         <h2 className='kanchi-features-heading green-text heading-bold'>Promising Locations</h2>
         <KanchiLocation/>
@@ -117,7 +117,8 @@ const Whykanchi = ()=>{
             <img src={AboutKanchi} alt="About Kanchi"/>
             <div className='kanchi-why-content'>
                 <h4 >Why Anandham Kanchipuram?</h4>
-                <p>Anandham at Konerikupam, Kanchipuram, is an established neighbourhood with a peaceful environment and high potential for investment. Strategically positioned near to Kanchipuram city, the region boasts of good infrastructure including transportation, workspaces, educational institutions etc.</p>
+                <p>Kanchipuram is renowned for its rich cultural heritage and burgeoning infrastructure. Here, buying residential plots for sale in Kanchipuram presents a lucrative investment opportunity for several compelling reasons.</p>
+                <p>This historic city, located just a short drive from Chennai, combines the allure of traditional charm with the benefits of modern living. Investing in Kanchipuram means more than just acquiring property; it’s about becoming part of an excellent residential community.</p>
                 <div className='kanchi-broucher-btn-div'><DownloadBroucher/></div> 
             </div>
         </div>

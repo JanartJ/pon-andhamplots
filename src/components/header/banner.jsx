@@ -77,11 +77,11 @@ export default function Banner({bannerImgSrc}) {
   const handleClick = () => {
     if (!validateForm(formData)) return;
 
-    const SENDURL = `https://docs.google.com/forms/d/e/1FAIpQLScGm62E_yvpd3SCITNqJr2jRFtBE0QJLe1KP7tsfPlfDI8Iqg/formResponse?entry.1439694226=${encodeForGoogleForms(
+    const SENDURL = `https://docs.google.com/forms/d/e/1FAIpQLSd7LrbHeOPyPrrGIz-ebqbFO_E0Uoc-0E5xyUy0urAFZLf0lg/formResponse?entry.897692886=${encodeForGoogleForms(
       formData.name
-    )}&entry.1816982461=${encodeForGoogleForms(
+    )}&entry.1811489556=${encodeForGoogleForms(formData.mobile)}&entry.29597710=${encodeForGoogleForms(
       formData.email
-    )}&entry.1780835660=${encodeForGoogleForms(formData.mobile)}`;
+    )}&entry.116710177=yes`;
 
     fetch(SENDURL, {
       method: "POST",
@@ -109,7 +109,7 @@ export default function Banner({bannerImgSrc}) {
           </div>          
         </div>
         
-        <Row className="form-container light-bg shadow rounded p-3 px-md-4 d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <Row className="form-container green-bg shadow rounded p-3 px-md-4 d-flex flex-column flex-md-row align-items-center justify-content-center">
             <Col>
             <input
                 type="text"
@@ -153,13 +153,14 @@ export default function Banner({bannerImgSrc}) {
             <Col>
             <CustomButton
                 title="Submit"
-                textcolor="btn"
+                textcolor="green"
                 btnBg="white"
                 textWeight={700}
                 btnMinWidth="10rem"
                 btnBorderRadius="20px"
                 handleClick={handleClick}
             />
+            
             </Col>
         </Row>
         {showSuccess && (

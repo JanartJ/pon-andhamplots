@@ -1,8 +1,8 @@
 import React from 'react';
 import "./ourproject.css";
-import Card1 from "../../assets/images/card1.jpg";
-import Card2 from "../../assets/images/card2.jpg";
-import Card3 from "../../assets/images/card3.jpg";
+import Card1 from "../../assets/images/card1.jpeg";
+import Card2 from "../../assets/images/card2.jpeg";
+import Card3 from "../../assets/images/card3.jpeg";
 import CustomButton from '../shared/button/button';
 
 /**
@@ -16,18 +16,18 @@ const OurProjects = () => {
     }
     const cardDetails = [
         {
-            "cardTitle":"Ongoing Projects",
+            "cardTitle":"Completed Projects",
             "cardLocation":"Padappai",
             "cardImg":Card1
         },
         {
-            "cardTitle":"Upcoming Projects",
+            "cardTitle":"Ongoing Projects",
             "cardLocation":"Kanchipuram",
             "cardImg":Card2
         },
         {
             "cardTitle":"Upcoming Projects",
-            "cardLocation":"Redhills",
+            "cardLocation":"Sholavaram",
             "cardImg":Card3
         }
     ]
@@ -51,7 +51,7 @@ const ProjectCard = ({keyValue,cardTitle,cardImg,cardLocation,handleProjectBtnCl
         <>
             <div key={keyValue} className='each-project-card-container'>
                 <img src={cardImg} alt={`banner${cardTitle}`}/>
-                <h3>{cardTitle}</h3>
+                <h3 className='p-3'>{cardTitle}</h3>
                 <h5><b>{cardLocation}</b></h5>
                 <div className='our-project-btn-div'>
                     <CustomButton

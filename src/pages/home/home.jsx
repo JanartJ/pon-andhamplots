@@ -8,7 +8,7 @@ import SliderVideo from "../../components/sliders/vsliders";
 
 import ProjectTabs from "../../components/project_tabs/projectTab";
 import Banner from "../../components/header/banner";
-import HomeBanner from "../../assets/images/home_banner.jpg"; 
+import HomeBanner from "../../assets/images/home_banner1.jpeg"; 
 
 
 export default function HomePage() {

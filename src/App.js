@@ -25,7 +25,7 @@ function App() {
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/kanchipuram" element={<Kanchi />} />
           <Route path="/padappai" element={<Padappai />} />
-          <Route path="/redhills" element={<Sholavaram />} />
+          <Route path="/sholavaram" element={<Sholavaram />} />
           <Route path="/contactus" element={<ContactUS />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<Page404 />} />

@@ -16,7 +16,7 @@ const ProjectTabs = (props) => {
         "MapLink":"https://maps.app.goo.gl/We1kLVMEV1E5QtVT6","iframeLink":"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14078.526685138102!2d80.0330963!3d12.8871589!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7edcddad8af%3A0xaab3ad23b3682db0!2sRaunaq%20Foundations%20-%20Anandham%20-%20Plots%20in%20Padappai!5e1!3m2!1sen!2sin!4v1755963532322!5m2!1sen!2sin"},
     {"id":2,"title":"Kanchipuram","content":"Kanchipuram Anadham Plots, a trusted plot developer based in Chennai, offers premium residential plots at unbeatable prices in rapidly developing locations.",
         "MapLink":"https://maps.app.goo.gl/Bg8cauPBaxFfMGEz5","iframeLink":"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14080.572558071908!2d79.7111061!3d12.8507169!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c3df1806e2c3%3A0x21754d7d64da3ca1!2sAnandham%20Plots%20-%20Konnerikuppam!5e1!3m2!1sen!2sin!4v1755963456686!5m2!1sen!2sin"},
-    {"id":3,"title":"Redhills","content":"Redhills Anadham Plots, a trusted plot developer based in Chennai, offers premium residential plots at unbeatable prices in rapidly developing locations.",
+    {"id":3,"title":"Sholavaram","content":"Sholavaram Anadham Plots, a trusted plot developer based in Chennai, offers premium residential plots at unbeatable prices in rapidly developing locations.",
         "MapLink":"https://maps.app.goo.gl/grevNqB6iz8AxtvD8","iframeLink":"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14058.496318192152!2d80.1564884!3d13.2387403!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527de145ef4935%3A0xccfd18f693baecf2!2sAnandham%20Plots%20-%20Sholavaram!5e1!3m2!1sen!2sin!4v1755963347522!5m2!1sen!2sin"}
   ]
   return(
@@ -30,7 +30,7 @@ const ProjectTabs = (props) => {
                             <Col className={`project-tab-btn ${projectActive === 0 ? 'active-tab-btn' : ""}`} onClick={()=>setProjectActive(0)}>Our Office</Col>
                             <Col className={`project-tab-btn ${projectActive === 1 ? 'active-tab-btn' : ""}`}  onClick={()=>setProjectActive(1)}>Padappai</Col>
                             <Col className={`project-tab-btn ${projectActive === 2 ? 'active-tab-btn' : ""}`}  onClick={()=>setProjectActive(2)}>Kanchipuram</Col>
-                            <Col className={`project-tab-btn ${projectActive === 3 ? 'active-tab-btn' : ""}`}  onClick={()=>setProjectActive(3)}>Redhills</Col>
+                            <Col className={`project-tab-btn ${projectActive === 3 ? 'active-tab-btn' : ""}`}  onClick={()=>setProjectActive(3)}>Sholavaram</Col>
                         </Row>
                     </Col>
                     <Col md={6}></Col>
@@ -41,7 +41,37 @@ const ProjectTabs = (props) => {
                         {projectsList.map((data,ind)=>{
                             return(
                                 <div style={{display: projectActive === ind ? "block":"none"}}>
-                                    <div>{data.content}</div>
+                                    {data.title === "Padappai" ? (
+                                    <div>
+                                        <p>A environment of exclusive and affordable plots in padappai</p>
+                                        <p>Anandham spans a generous 2.1 acres, offering a remarkable opportunity for both development and investment. Located along the bustling Tambaram – Mudichur – Oragadam Road near Padappai, next to the prestigious Alwin International School, this land enjoys a strategic and highly desirable position.</p>
+                                        <p>The project comprises 60 plots, ideal for residential or commercial use, making it an appealing choice for investors and developers eager to tap into the area’s expanding prospects. With easy access to essential amenities, schools and residential complexes, Anandham.
+                                        </p>
+                                        <p>Serves as a promising foundation for diverse ventures. Whether for residential, commercial, or mixed-use purposes, this plot holds significant potential to foster a vibrant and thriving residential plots in padappai.</p>
+                                    </div>)
+                                    :
+                                    data.title === "Kanchipuram" ?
+                                    (<div>
+                                        <p>Kanchipuram is renowned for its rich cultural heritage and burgeoning infrastructure. Here, buying residential plots for sale in Kanchipuram presents a lucrative investment opportunity for several compelling reasons.</p>
+                                        <p>This historic city, located just a short drive from Chennai, combines the allure of traditional charm with the benefits of modern living. Investing in Kanchipuram means more than just acquiring property; it’s about becoming part of an excellent residential community.</p>
+                
+                                    </div>)
+                                    : data.title === "Sholavaram" ?
+                                    (
+                                        <div>
+                                            <p>Red Hills is a prominent locality in the northern part of Chennai. Due to its rapidly growing infrastructure and seamless connectivity to other parts of the city, it has emerged as the most preferred destination for homebuyers and real estate investors.</p>
+                                            <p> With this project, AnandhamPlots has made residential land and plots available for sale near Red Hills at reasonable prices. The best thing about this project is the easy access it offers to world-class amenities and facilities along with the thriving social infrastructure that surrounds it.
+                                            </p>
+                                        </div>
+                                    )
+                                    :
+                                    (<div>
+                                        <p>At Anandham Plots, we believe that owning land is more than just a transaction—it’s a foundation for dreams, growth, and a secure future.
+                                        </p>
+                                        <p>Headquartered in the heart of Chennai at Ground Floor, 63/29, Poes Garden, Teynampet, we have proudly established ourselves as a trusted name in real estate, serving discerning customers across Padappai, Kanchipuram, and Red Hills.</p>
+                                        <p>With a commitment to transparency, integrity, and excellence, we offer carefully curated plots that are not just investments but pathways to building your dream home or securing your legacy.</p>
+                                        <p>Our experienced team is dedicated to guiding you through every step of the process—from site visits and legal clearances to final registration—ensuring a seamless and hassle-free experience.</p>
+                                    </div>)}
                                     <a href={data.MapLink} target='_blank'>Visit Site</a>
                                 </div>
                             )
