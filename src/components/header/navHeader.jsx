@@ -264,12 +264,12 @@ export default function NavHeader() {
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
                       }}
-                      >Seller spot</Nav.Link>
-                      <Nav.Link href="/padappai" className="nav-header-text px-3"
+                      >Seller spot</Nav.Link> */}
+                      <Nav.Link href="/careers" className="nav-header-text px-3"
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
                       }}
-                      >Careers</Nav.Link> */}
+                      ><h5>Careers</h5></Nav.Link>
                       <Nav.Link href="/contactus" className="nav-header-text px-3"
                       onMouseOver={() => {
                         setShowProjectsDropdown(false)
@@ -354,10 +354,10 @@ export default function NavHeader() {
                         </li>
                         <li className="nav-item">
                           <a className={`nav-link `}  href="sellerspot">Seller Spot</a>
-                        </li>
+                        </li>*/}
                         <li className="nav-item">
                           <a className={`nav-link `}  href="careers">Careers</a>
-                        </li> */}
+                        </li> 
                         <li className="nav-item">
                         <div className='mobileview-nav'><FontAwesomeIcon icon={faPhone} /> <a className={`nav-link`} href="contact">Contact</a></div>
                         </li>

@@ -13,6 +13,8 @@ import { Sholavaram } from './pages/sholavaram/sholavaram';
 import { ContactUS } from './pages/contactus/contactus';
 import AboutUs from './pages/aboutus/aboutus';
 import BlogPage from './pages/blogs/blogs';
+import  Careers  from './pages/career/carrer';
+import CareerDetails from './pages/career/careerDetails';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/career/:id" element={<CareerDetails />} />
           <Route path="/kanchipuram" element={<Kanchi />} />
           <Route path="/padappai" element={<Padappai />} />
           <Route path="/sholavaram" element={<Sholavaram />} />
