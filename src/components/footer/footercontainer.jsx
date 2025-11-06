@@ -4,7 +4,7 @@ import "./contactForm.css";
 import { Row, Col,Modal, Button  } from "react-bootstrap";
 import LogoImg from "../../assets/logo/Ponanandham_logo.png";
 import FB from "../../assets/icons/fb.png";
-import Twitter from "../../assets/icons/twitter.png";
+import Twitter from "../../assets/icons/rightarrow.png";
 import Instagram from "../../assets/icons/insta.png";
 // import Youtube from "../../assets/icons/utube.png";
 import Linkedin from "../../assets/icons/linkedin.png";
@@ -19,6 +19,10 @@ import Linkedin from "../../assets/icons/linkedin.png";
   const handleLink = (path) => {
     window.location.href=`/${path}`;
   };
+
+  const handleIcons = (paths)=>{
+    window.open(paths,"_blank");
+  }
   return(
     <div className='footer-container-anadham'>
       <ContactForm/>
@@ -59,17 +63,17 @@ import Linkedin from "../../assets/icons/linkedin.png";
             <br/>
             <Row className='footer-margin-bottom footer-text-indent'>Follow Us On</Row>
             <Row className='footer-social-icons'>
-              <img src={FB} alt="facebook"/>
-              <img src={Twitter} alt="twitter"/>
-              <img src={Instagram} alt="instagram"/>
-              <img src={Linkedin} alt="Linkedin"/>
+              <img src={FB} alt="facebook" width="100%" onClick={()=>handleIcons("https://www.facebook.com/profile.php?id=61576391313069")}/>
+              {/* <img src={Twitter} alt="twitter" width="100%" onClick={()=>handleIcons("kanchipuram")}/> */}
+              <img src={Instagram} alt="instagram" onClick={()=>handleIcons("https://www.instagram.com/anandham_plots/")}/>
+              <img src={Linkedin} alt="Linkedin" onClick={()=>handleIcons("https://www.linkedin.com/company/anandham-plots/")} />
             </Row>
           </Col>
         </Row>
         <br></br>
         <Row> 
             <Col className='footer-last-container'>       
-              All rights reserved © {new Date().getFullYear()} Anadhamplots.in  | 
+              All rights reserved © {new Date().getFullYear()} R3 SKYLINE DEVELOPERS LLP  | 
               <span style={{cursor:"pointer"}} onClick={()=>handleShow()} > <u>Terms and conditions apply</u> </span>  
             </Col>      
         </Row>

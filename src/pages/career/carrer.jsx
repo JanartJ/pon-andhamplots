@@ -16,6 +16,25 @@ const jobs = [
     title: "Sales Manager",
     description: "Develop and execute sales strategy for residential/commercial projects, manage sales team, drive revenue growth...",
   },
+  {
+    id: 3,
+    path:"site-engineer",
+    title: "Site Engineer",
+    description: "We are looking for a skilled Site Engineer to manage day-to-day construction activities....",
+  },
+  {
+    id: 4,
+    path:"accounts-executive",
+    title: "Accounts Executive",
+    description: "We are seeking a detail-oriented Accounts Executive to manage day-to-day accounting operations, maintain accurate financial records, and support...",
+  },
+  {
+    id: 5,
+    path:"land-acquisition-bd",
+    title: "Land Acquisition – Business Development",
+    description: "We are looking for a Land Acquisition professional to support our real estate/infrastructure projects by identifying and acquiring suitable land parcels...",
+  }
+
 ];
 
 export default function Careers() {
