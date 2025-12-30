@@ -14,17 +14,18 @@ const ContactForm = ({type="normal"}) => {
       name: "",
       email: "",
       mobile: "",
+      terms: false, // NEW
   });
   
   const [errors, setErrors] = useState({});
   const [showSuccess, setShowSuccess] = useState(false);
  
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
 
     const updatedFormData = {
       ...formData,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     };
 
     setFormData(updatedFormData);
@@ -33,28 +34,34 @@ const ContactForm = ({type="normal"}) => {
 
   const validateForm = (formData) => {
     const newErrors = {};
-
+  
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
-
+  
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = "Invalid email address";
     }
-
+  
     const mobileRegex = /^[0-9]{10}$/;
     if (!formData.mobile.trim()) {
       newErrors.mobile = "Mobile number is required";
     } else if (!mobileRegex.test(formData.mobile)) {
       newErrors.mobile = "Mobile number must be 10 digits";
     }
-
+  
+    // ✅ NEW – Terms validation
+    if (!formData.terms) {
+      newErrors.terms = "You must agree to the Terms & Conditions";
+    }
+  
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  
 
   const encodeForGoogleForms = (str) => {
     return encodeURIComponent(str).replace(/%20/g, "+");
@@ -111,6 +118,7 @@ const ContactForm = ({type="normal"}) => {
               <h2 className="heading-bold">We Are Happy to Help</h2>
               <p>Fill out the details and enquiry now.</p>
               <div className="form-grid">
+                <div>
                 <div className="input-container">
                   <FaUser className="icon" />
                   <input
@@ -121,8 +129,11 @@ const ContactForm = ({type="normal"}) => {
                     value={formData.name}
                     onChange={handleChange}
                 />
-                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                
                 </div>
+                {errors.name && <div className="invalid-feedback1">{errors.name}</div>}
+                </div>
+                <div>
                 <div className="input-container">
                   <FaPhone className="icon" />
                   <input
@@ -133,26 +144,51 @@ const ContactForm = ({type="normal"}) => {
                       value={formData.mobile}
                       onChange={handleChange}
                   />
-                  {errors.mobile && (
-                      <div className="invalid-feedback">{errors.mobile}</div>
+                </div>
+                
+                {errors.mobile && (
+                      <div className="invalid-feedback1">{errors.mobile}</div>
                   )}
                 </div>
-                <div className="input-container">
-                  
-                  <FaEnvelope className="icon" />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className={`${errors.email ? "is-invalid" : ""}`}
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  {errors.email && (
-                      <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
+                <div>
+                  <div className="input-container">                    
+                    <FaEnvelope className="icon" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className={`${errors.email ? "is-invalid" : ""}`}
+                      value={formData.email}
+                      onChange={handleChange}
+                    />                    
+                  </div>  
+                    {errors.email && (
+                          <div className="invalid-feedback1">{errors.email}</div>
+                      )}
+                </div>  
+                <br></br>                
+          
               </div>
+              <div className="terms-container">
+                  <label className="terms-label">
+                    <input
+                      type="checkbox"
+                      name="terms"
+                      checked={formData.terms}
+                      onChange={handleChange}
+                    />
+                    <span>
+                    I authorise Pon Anandham & its representatives to contact me with updates and notifications via Email/SMS/What'sApp/Call. This will override DND/NDNC.
+                    </span>
+                  </label>
+
+                  {errors.terms && (
+                    <div className="invalid-feedback d-block">
+                      {errors.terms}
+                    </div>
+                  )}
+                </div>
+
               <button type="submit" className="submit-button" onClick={handleClick}>Enquiry Now</button>
               
             </div>
