@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
         >
           Privacy Policy
         </h2>
-
+        <p>Latest Policy Updated At: <strong>04 Jan 2026</strong></p>
         <p>
           At <strong>Anadham Plots</strong>, we value your privacy and are
           committed to protecting your personal information. This policy
@@ -29,13 +29,13 @@ export default function PrivacyPolicy() {
         </h4>
         <p>We collect personal information when you:</p>
         <ul>
-          <li>Fill out forms on our website</li>
+          <li>Fill out forms on our website, this may include your name, email, phone number, and other relevant
+          details.</li>
           <li>Subscribe to our mailing list</li>
           <li>Interact with us through customer support</li>
         </ul>
         <p>
-          This may include your name, email, phone number, and other relevant
-          details.
+          When you voluntarily send us electronic mail, we will keep a record of this information so that we can respond to you. We only collect information from you when you register on our site or fill out a form. Also, when filling out a form on our site, you may be asked to enter your: name, e-mail address or phone number. You may, however, visit our site anonymously. In case you have submitted your personal information and contact details, we reserve the rights to Call, SMS, Email or WhatsApp about our products and offers, even if your number has DND activated on it.
         </p>
 
         <h4 style={{ marginTop: "20px", color: "#335731" }}>
