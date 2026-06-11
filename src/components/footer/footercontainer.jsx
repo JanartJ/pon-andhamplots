@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
+import React from 'react'
 import ContactForm from './contactForm';
 import "./contactForm.css";
-import { Row, Col,Modal, Button  } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import LogoImg from "../../assets/logo/Ponanandham_logo.png";
 import FB from "../../assets/icons/fb.png";
-import Twitter from "../../assets/icons/rightarrow.png";
+// import Twitter from "../../assets/icons/rightarrow.png";
 import Instagram from "../../assets/icons/insta.png";
 // import Youtube from "../../assets/icons/utube.png";
 import Linkedin from "../../assets/icons/linkedin.png";
@@ -55,9 +55,10 @@ import Linkedin from "../../assets/icons/linkedin.png";
               </Col> */}
               <Col className="qck-link" md={6}>
                 <h4>Our Projects</h4>
-                <div onClick={()=>handleLink("kanchipuram")}>Ongoing Projects</div>
-                <div onClick={()=>handleLink("padappai")}>Completed Projects</div>
-                <div onClick={()=>handleLink("sholavaram")}>Upcoming Projects</div>
+                <div onClick={()=>handleLink("kanchipuram")}>Kanchipuram</div>
+                <div onClick={()=>handleLink("sholavaram")}>Sholavaram</div>
+                <div onClick={()=>handleLink("padappai")}>Padappai</div>
+                <div onClick={()=>handleLink("sangamam")}>Sangamam</div>
               </Col>              
             </Row>
             <br/>

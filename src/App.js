@@ -15,6 +15,7 @@ import AboutUs from './pages/aboutus/aboutus';
 import BlogPage from './pages/blogs/blogs';
 import  Careers  from './pages/career/carrer';
 import CareerDetails from './pages/career/careerDetails';
+import { Sangamam } from './pages/sangamam/sangamam';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/kanchipuram" element={<Kanchi />} />
           <Route path="/padappai" element={<Padappai />} />
           <Route path="/sholavaram" element={<Sholavaram />} />
+          <Route path="/sangamam" element={<Sangamam/>} />
           <Route path="/contactus" element={<ContactUS />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<Page404 />} />

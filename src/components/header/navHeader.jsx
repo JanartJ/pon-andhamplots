@@ -6,13 +6,11 @@ import anandham_logo from "../../assets/logo/anandham_Logo.png";
 import Padappai from "../../assets/images/card1.jpeg";
 import Kanchipuram from "../../assets/images/card2.jpeg";
 import Sholavaram from "../../assets/images/card3.jpeg";
+import Sangamam from "../../assets/images/card4.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse,faBook,faBriefcase,faCaretDown,faPhone,faHourglassEnd,faHourglassHalf,faHourglassStart,faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavHeader() {
-
- 
-
 
   useEffect(() => {
     const updateHeight = () => {
@@ -26,21 +24,28 @@ export default function NavHeader() {
     return () => {
       window.removeEventListener('resize', updateHeight);
     };
-  }, []);
+  }, []); 
 
+
+  // const [showProject, setShowProject] = useState("Kanchipuram");
+  const [showOngoingDropdown, setShowOngoingDropdown] = useState(false);
   
-
-
-
   const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
   const [showProject, setShowProject] = useState("Padappai");
-  const handleProjectClick = (values) => {
-    console.log("Valuess",values);
-    setShowProject(values);
-  }
+
   const handleLinks = (path) => {
     window.location.href = `/${path}`
   }
+
+  const handleOngoingToggle = () => {
+    setShowOngoingDropdown(prev => !prev);
+  };
+  
+  const handleProjectSelect = (project) => {
+    setShowProject(project);
+    // setShowOngoingDropdown(false);
+  };
+  
 
   return (
     <div className='nav-header-lap'>
@@ -96,51 +101,90 @@ export default function NavHeader() {
                                 showProject === "Kanchipuram" ?
                                 <img src={Kanchipuram} alt={`Project-${showProject}`} className="project-image" />
                                 :
+                                showProject === "Sangamam" ?
+                                <img src={Sangamam} alt={`Project-${showProject}`} className="project-image" />
+                                :
                                 <img src={Sholavaram} alt={`Project-${showProject}`} className="project-image" />
                                 }
                               </div>
                             </Col>
 
                             {/* Column 2 - Buttons */}
+                            
                             <Col md={3} xs={12} className="mb-3 mb-md-0 project-column">
-                              <div className='project-column-btns'>
+                              <div className="project-column-btns">
+
+                                {/* Completed Projects */}
                                 <CustomButton
                                   title="Completed Projects"
-                                  value={"Padappai"}
+                                  value="Padappai"
                                   textcolor={showProject === "Padappai" ? "light" : "btn"}
                                   btnBg={showProject === "Padappai" ? "green" : "white"}
                                   textWeight={700}
                                   btnMinWidth="10rem"
                                   btnBorderRadius="5px"
-                                  // btnMarg={"1rem"}
-                                  handleClick={handleProjectClick}
+                                  handleClick={() => {setShowProject("Padappai"); setShowOngoingDropdown(false);}}
                                 />
-                                <br/>
+
+                                <br />
+
+                                {/* Ongoing Projects (Dropdown Button) */}
                                 <CustomButton
                                   title="Ongoing Projects"
-                                  value={"Kanchipuram"}
-                                  textcolor={showProject === "Kanchipuram" ? "light" : "btn"}
-                                  btnBg={showProject === "Kanchipuram" ? "green" : "white"}
+                                  value="Ongoing"
+                                  textcolor={
+                                    ["Kanchipuram", "Sholavaram"].includes(showProject)
+                                      ? "light"
+                                      : "btn"
+                                  }
+                                  btnBg={
+                                    ["Kanchipuram", "Sholavaram"].includes(showProject)
+                                      ? "green"
+                                      : "white"
+                                  }
                                   textWeight={700}
                                   btnMinWidth="10rem"
                                   btnBorderRadius="5px"
-                                  // btnMarg={"1rem"}
-                                  handleClick={handleProjectClick}
+                                  handleClick={handleOngoingToggle}
                                 />
-                                <br/>
+
+                                {/* Dropdown */}
+                                <div className={`ongoing-dropdown ${showOngoingDropdown ? "active" : ""}`}>
+                                  <button
+                                    className={`dropdown-item ${
+                                      showProject === "Kanchipuram" ? "active" : ""
+                                    }`}
+                                    onClick={() => handleProjectSelect("Kanchipuram")}
+                                  >
+                                    Kanchipuram
+                                  </button>
+
+                                  <button
+                                    className={`dropdown-item ${
+                                      showProject === "Sholavaram" ? "active" : ""
+                                    }`}
+                                    onClick={() => handleProjectSelect("Sholavaram")}
+                                  >
+                                    Sholavaram
+                                  </button>
+                                </div>
+                                
+                                {/* Completed Projects */}
                                 <CustomButton
                                   title="Upcoming Projects"
-                                  value={"Sholavaram"}
-                                  textcolor={showProject === "Sholavaram" ? "light" : "btn"}
-                                  btnBg={showProject === "Sholavaram" ? "green" : "white"}
+                                  value="Sangamam"
+                                  textcolor={showProject === "Sangamam" ? "light" : "btn"}
+                                  btnBg={showProject === "Sangamam" ? "green" : "white"}
                                   textWeight={700}
                                   btnMinWidth="10rem"
                                   btnBorderRadius="5px"
-                                  // btnMarg={"1rem"}
-                                  handleClick={handleProjectClick}
+                                  handleClick={() => {
+                                    setShowProject("Sangamam"); 
+                                    setShowOngoingDropdown(false);
+                                  }}
                                 />
-                              </div>        
-                              
+
+                              </div>
                             </Col>
 
                             {/* Column 3 - Heading */}
@@ -173,6 +217,25 @@ export default function NavHeader() {
                                       value={'kanchipuram'}
                                       textcolor={showProject === "Kanchipuram" ? "light" : "btn"}
                                       btnBg={showProject === "Kanchipuram" ? "green" : "white"}
+                                      textWeight={700}
+                                      btnMinWidth="10rem"
+                                      btnBorderRadius="5px"
+                                      // btnMarg={"1rem"}
+                                      handleClick={handleLinks}
+                                    />
+                                    {/* <a className="cursor-pointer" href="/kanchipuram">Explore More</a> */}
+                                  </div>
+                                  :
+                                  showProject === "Sangamam" ?
+                                  <div className='project-column-content'>
+                                    <h5 className='green-text'>Featured Projects</h5>
+                                    <p>Explore our latest and most exciting developments.</p>
+                                    <h4 className='green-text'><b>Sangamam</b></h4>
+                                    <CustomButton
+                                      title="Know More"
+                                      value={'sangamam'}
+                                      textcolor={showProject === "Sangamam" ? "light" : "btn"}
+                                      btnBg={showProject === "Sangamam" ? "green" : "white"}
                                       textWeight={700}
                                       btnMinWidth="10rem"
                                       btnBorderRadius="5px"
@@ -219,6 +282,13 @@ export default function NavHeader() {
                                      allowfullscreen="" loading="lazy" 
                                      title="Kanchipuram"
                                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    :
+                                    showProject === "Sangamam" ?
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14088.11501901417!2d80.13736!3d12.7154802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5257006790b693%3A0x270387706ee1d413!2sAkshaya%20Sangamam!5e1!3m2!1sen!2sin!4v1769442156160!5m2!1sen!2sin" 
+                                    width="60%" height="200" style={{"border":"0"}}
+                                    allowfullscreen="" loading="lazy"
+                                    title="Sangamam" 
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     :
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14058.496318192152!2d80.1564884!3d13.2387403!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a527de145ef4935%3A0xccfd18f693baecf2!2sAnandham%20Plots%20-%20Sholavaram!5e1!3m2!1sen!2sin!4v1755963347522!5m2!1sen!2sin"
                                     height="200" width="60%" style={{"border":"0"}}  
@@ -316,7 +386,7 @@ export default function NavHeader() {
                           <div className='mobileview-nav'><FontAwesomeIcon icon={faHouse} /> <a className={`nav-link`} href="/">Home</a></div>
                         </li>
                         <li className="nav-item">
-                        <div className='mobileview-nav'><FontAwesomeIcon icon={faBook} /> <a className={`nav-link `}  href="about">About Us</a></div>
+                        <div className='mobileview-nav'><FontAwesomeIcon icon={faBook} /> <a className={`nav-link `}  href="aboutus">About Us</a></div>
                         </li>
                         {/* Projects with dropdown */}
                         <li className="nav-item">
@@ -335,13 +405,16 @@ export default function NavHeader() {
                           <div className="collapse" id="projectsSubmenu">
                             <ul className="list-unstyled ms-3">
                               <li>
-                              <div className='mobileview-nav'><FontAwesomeIcon icon={faHourglassEnd} /><a className="nav-link" href="projects/web">Completed Projects</a></div>
+                              <div className='mobileview-nav'><FontAwesomeIcon icon={faHourglassEnd} /><a className="nav-link" href="padappai">Completed Projects</a></div>
                               </li>
                               <li>
-                              <div className='mobileview-nav'><FontAwesomeIcon icon={faHourglassHalf} /><a className="nav-link" href="projects/mobile">Ongoing Projects</a></div>
+                              <div className='mobileview-nav'><FontAwesomeIcon icon={faHourglassHalf} /><a className="nav-link" href="kanchipuram">Ongoing Projects - Kanchipuram</a></div>
                               </li>
                               <li>
-                              <div className='mobileview-nav'> <FontAwesomeIcon icon={faHourglassStart} /> <a className="nav-link" href="projects/ai">Upcoming Projects</a></div>
+                              <div className='mobileview-nav'><FontAwesomeIcon icon={faHourglassHalf} /><a className="nav-link" href="sholavaram">Ongoing Projects - Sholavaram</a></div>
+                              </li>
+                              <li>
+                              <div className='mobileview-nav'> <FontAwesomeIcon icon={faHourglassStart} /> <a className="nav-link" href="sangamam">Upcoming Projects</a></div>
                               </li>
                             </ul>
                           </div>
@@ -349,17 +422,12 @@ export default function NavHeader() {
                         <li className="nav-item">
                         <div className='mobileview-nav'> <FontAwesomeIcon icon={faBook} /><a className={`nav-link `}  href="blogs">Blogs</a> </div>
                         </li>
-                        {/* <li className="nav-item">
-                          <a className={`nav-link `}  href="coreteam">Core Team</a>
-                        </li>
+    
                         <li className="nav-item">
-                          <a className={`nav-link `}  href="sellerspot">Seller Spot</a>
-                        </li>*/}
-                        <li className="nav-item">
-                          <a className={`nav-link `}  href="careers">Careers</a>
+                          <div className='mobileview-nav'>  <FontAwesomeIcon icon={faBook} /> <a className={`nav-link `}  href="careers">Careers</a></div>
                         </li> 
                         <li className="nav-item">
-                        <div className='mobileview-nav'><FontAwesomeIcon icon={faPhone} /> <a className={`nav-link`} href="contact">Contact</a></div>
+                        <div className='mobileview-nav'><FontAwesomeIcon icon={faPhone} /> <a className={`nav-link`} href="contactus">Contact</a></div>
                         </li>
                       </ul>
                     </div>

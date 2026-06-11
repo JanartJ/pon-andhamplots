@@ -3,6 +3,7 @@ import "./ourproject.css";
 import Card1 from "../../assets/images/card1.jpeg";
 import Card2 from "../../assets/images/card2.jpeg";
 import Card3 from "../../assets/images/card3.jpeg";
+import Card4 from "../../assets/images/card4.jpeg";
 import CustomButton from '../shared/button/button';
 
 /**
@@ -26,9 +27,14 @@ const OurProjects = () => {
             "cardImg":Card2
         },
         {
-            "cardTitle":"Upcoming Projects",
+            "cardTitle":"Ongoing Projects",
             "cardLocation":"Sholavaram",
             "cardImg":Card3
+        },
+        {
+            "cardTitle":"Upcoming Projects",
+            "cardLocation":"Sangamam",
+            "cardImg":Card4
         }
     ]
   return(
